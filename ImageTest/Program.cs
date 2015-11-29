@@ -20,7 +20,9 @@ namespace ImageTest
         static int copiedFiles = 0;
         static void Main(string[] args)
         {
-            string[] fileEntries = Directory.GetFiles(fromPath);
+            foreach(string fPath in fromPath.Split(char.Parse(";")))
+            { 
+            string[] fileEntries = Directory.GetFiles(fPath);
             foreach (string fileName in fileEntries)
             {
                 try
@@ -32,6 +34,7 @@ namespace ImageTest
                 {
                     failedFiles += 1;
                 }
+            }
             }
             Console.WriteLine(numFiles.ToString() + " har synkats");
             Console.WriteLine(copiedFiles.ToString() + " nya bilder har kopierats");
