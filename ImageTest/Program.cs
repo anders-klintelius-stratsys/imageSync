@@ -69,6 +69,16 @@ namespace ImageTest
                 dateTaken = dateTaken.Insert(4, "-").Insert(7, "-");
                 copyImage(path, DateTime.Parse(dateTaken));
             }
+            else if (Path.GetExtension(path).ToLower() == ".mov")
+            {
+                string dateTaken = Path.GetFileName(path).Split(char.Parse("_"))[0];
+                if (dateTaken.Length != 8)
+                {
+                    dateTaken = Path.GetFileName(path).Split(char.Parse("_"))[1];
+                }
+                dateTaken = dateTaken.Insert(4, "-").Insert(7, "-");
+                copyImage(path, DateTime.Parse(dateTaken));
+            }
             else
             {
                 unknownFiles += 1;

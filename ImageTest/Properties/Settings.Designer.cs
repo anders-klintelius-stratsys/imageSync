@@ -25,19 +25,20 @@ namespace ImageTest.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("D:\\OneDrive Anders\\OneDrive\\Bilder\\Kamerabilder")]
-        public string fromPath {
+        [global::System.Configuration.DefaultSettingValueAttribute("I:\\Pictures\\")]
+        public string toPath {
             get {
-                return ((string)(this["fromPath"]));
+                return ((string)(this["toPath"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("D:\\Pictures\\")]
-        public string toPath {
+        [global::System.Configuration.DefaultSettingValueAttribute("I:\\OneDrive Anders\\OneDrive\\Bilder\\Kamerabilder;C:\\Users\\andre\\OneDrive\\Pictures\\" +
+            "Kamerabilder")]
+        public string fromPath {
             get {
-                return ((string)(this["toPath"]));
+                return ((string)(this["fromPath"]));
             }
         }
     }
